@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+.fn-purp {
+  color: rgb(171, 75, 255);
+}
+
+.nav-height {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-active {
+  background-color: rgb(171, 75, 255);
+  color: white;
+  font-weight: bold;
+  transition: 0.5s ease-out;
+}
+
+.btn-nonactive{
+  background-color: transparent;
+  border: 2px solid rgb(171, 75, 255);
+  color: rgb(171, 75, 255);
+  font-weight: bold;
+  transition: 0.5s ease-out;
+}
+
+
+.first-part {
+  background-color: black;
+  height: 100vh;
+}
+
+.right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-content img {
+  width: 75%;
+}
+
+.pos-lef {
+  top: 25%;
+  left: 10%;
+}
+
+.btn-active:hover {
+  transition: ease-in 0.5s;
+  background-color: rgb(105, 46, 157);
+  color: white;
+}
+
+.btn-nonactive:hover {
+  transition: ease-in 0.5s;
+  background-color: rgb(171, 75, 255);
+  color: white;
+}
+
+.motion {
+  -webkit-animation: up-down 2s infinite alternate;
+  animation: up-down 2s infinite alternate;
+}
+
+.general-height {
+  height: 100vh;
+  background-color: black;
+}
+
+.block-ctr {
+  background-color: rgb(181, 4, 230);
+  height: 70%;
+}
+
+.ctr-number {
+  font-size: 900%;
+}
+
+.cont-form {
+  margin-bottom: 6%;
+  border-left: 5px solid rgb(181, 4, 230);
+}
+
+.label-style {
+  margin-left: 1.5%;
+}
+
+.input-style {
+  margin-left: 1.5%;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.input-style::placeholder{
+  color: white;
+}
+
+.input-style:focus{
+  outline: none;
+}
+
+.input-style:focus::placeholder{
+  color: transparent;
+}
+
+.list {
+  display: inline-block;
+}
+
+.list::after{
+  display: block;
+  content: '';
+  border-bottom: 3px solid rgb(181, 4, 230);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+
+.list:hover::after{
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
+
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(25px);
+  }
+}
